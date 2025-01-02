@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection{
+    background-color: darkgray;
+    color: black;
+}
+
+:root{
+    --primary-color:#696969;
+    --secondary-color:#808080;
+}
+
+.logo{
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: sans-serif;
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search{
+    width: 4.375rem;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    font-size: 1rem;
+    color: #fff;
+}
+
+::placeholder {
+    color: white;
+    background-color: transparent;
+    transition: width 0.5s;
+    opacity: 1; /* Firefox */
+}
+
+.search:focus{
+    outline: 2px solid #da48ff;
+    box-shadow: 2px 2px 15px #da48ff;
+    background-color: var(--secondary-color);
+    width: 12.25rem;
+    transition: width 0.5s;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+/* Style for the loading message */
+#main p {
+    font-size: 1.5rem;
+    color: #fff; /* White color for loading text */
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;  /* Position it vertically in the center */
+    left: 50%; /* Position it horizontally in the center */
+    transform: translate(-50%, -50%);  /* Adjust position for true centering */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 255, 255, 0.6); /* Text shadow */
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 2px 2px 20px #9b9b9b;
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 3px;
+}
+
+.movie-info {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.movie-info span.green {
+    color: lightgreen;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.overview {
+    position: absolute;
+    color: white;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cacaca;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(+101%);
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in;
+}
+.movie:hover{
+    box-shadow: 2px 2px 20px #da48ff;
+    transition: box-shadow 1s;
+}
+
+.footer{
+    background-color: #3f3f3f;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.625rem;
+}
+
+.lif{
+    color: white;
+    font-size: large;
+    text-decoration: none;
+    
+}
+.lif:hover{
+    text-decoration: underline;
+    text-shadow: 2px 2px 20px white;
+}
+.about{
+    margin-right: 0.6rem;
+}
+.tel{
+    background-color: transparent;
+}
+.teli{
+    width: 1.813rem;
+    height: 1.813rem;
+    margin-top: 0.375rem;
+    margin-left: 0.6rem;
+    justify-content: center;
+    align-items: center;
+}
+.rights{
+    display: flex;
+    justify-content: end;
+}
+
+.linee{
+    border: 0;
+    height: 0.15rem;
+    width: 80%;
+    background-color: #aa48ff;
+    margin: 2rem;
+}
+.linep{
+    display: flex;
+    justify-content: center;
+}
+
+.tipw{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #ff4747;
+    font-size: larger;
+    text-shadow: 2px 2px 5px;
+}
+.tipw:hover{
+    text-shadow: 2px 2px 20px black;
+    transition: text-shadow 1s;
+
+}
+.srcd{
+    display: flex;
+    justify-content: center;
+}
+.srct{
+    font-size: large;
+}
+.srcl{
+    font-size: large;
+    text-decoration: none;
+}
+.srcl:hover{
+    text-shadow: 4px 4px 40px;
+    transition: text-shadow 3s;
+}
+.srcl:hover{
+    text-decoration: underline;
+}
